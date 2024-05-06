@@ -36,7 +36,9 @@ Route::middleware(['auth','role:A'])->group(function () {
     Route::get('/dashboard', [DashController::class, 'admin'])->middleware(['auth'])->name('admin');
 });
 
-Route::get('/', [DashController::class, 'user'])->middleware(['auth'])->name('user');
+Route::get('/', [DashController::class, 'user'])->middleware(['auth'])->name('users');
+Route::post('/regist', [DashController::class, 'regist'])->middleware(['auth'])->name('regists');
+Route::get('/regist/{id}', [DashController::class, 'form'])->middleware(['auth'])->name('forms');
 
 
 Route::resource('kategori', CategoryController::class);

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Category;
+use App\Models\Pelatihan;
 
 class Course extends Model
 {
@@ -26,5 +27,10 @@ class Course extends Model
     public function category()
     {
         return $this->belongsTo(Category::class, 'kategori_id');
+    }
+
+    public function pelatihan()
+    {
+        return $this->hasMany(Pelatihan::class, 'kursus_id');
     }
 }
