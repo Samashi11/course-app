@@ -28,8 +28,9 @@ class DashController extends Controller
         $kategori = Category::all();
         $kursus = Course::all();
         $pelatihan = Pelatihan::all();
+        $user = User::all();
 
-        return view('dashboard',  compact('kategori', 'pelatihan', 'kursus'));
+        return view('dashboard',  compact('kategori', 'pelatihan', 'kursus', 'user'));
     }
 
     public function user() {
