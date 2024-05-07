@@ -24,7 +24,7 @@
                 <div class="row">
                   <div class="col-lg-12">
                     <fieldset>
-                      <input type="text" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                      <input type="text" name="namas" id="name" placeholder="Your Name..." autocomplete="on" required>
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
@@ -34,21 +34,36 @@
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <input type="text" name="name" id="name" readonly value="{{$course->course_name}}" placeholder="Your Name..." autocomplete="on" >
+                      <input type="text" name="kursus" id="name" readonly value="{{$course->course_name}}" placeholder="Your Name..." autocomplete="on" >
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 d-none">
+                    <fieldset>
+                      <input name="kursus_id" id="name" readonly value="{{ $course->id }}" placeholder="Your Name..." autocomplete="on" >
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 d-none">
+                    <fieldset>
+                      <input name="user_id" id="name" readonly value="{{ Auth::user()->id }}" placeholder="Your Name..." autocomplete="on" >
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 d-none">
+                    <fieldset>
+                      <input name="tgl_beli" id="tgl_beli" readonly value="{{date('Y-m-d')}}" placeholder="Tanggal Pembelian..." autocomplete="off">
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <input type="text" name="name" id="name" readonly value="Rp.{{$course->cost}}.000,-" placeholder="Your Name..." autocomplete="on" >
+                      <input type="text" readonly value="Rp.{{$course->cost}}.000,-" placeholder="" autocomplete="on" >
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <button type="submit" id="form-submit" class="orange-button">Order Now</button>
+                      <button type="submit"  class="orange-button">Order Now</button>
                     </fieldset>
                   </div>
                 </div>
-              </form>
+            </form>
           </div>
         </div>
       </div>

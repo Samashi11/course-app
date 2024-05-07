@@ -17,6 +17,9 @@ class Pelatihan extends Model
     protected $fillable = [
         'nama',
         'email',
+        'kursus_id',
+        'user_id',
+        'tgl_beli',
     ];
 
     public function user()

@@ -27,7 +27,7 @@
 
         <div class="form-group">
             <label for="deskripsi" class="form-label">Deskripsi <span class="text-danger">*</span></label>
-            <textarea class="form-control form-control-user @error('deskripsi') is-invalid @enderror" value="{{$kursus->course_description}}" id="deskripsi" name="desc" rows="3" placeholder="Deskripsi Kursus"></textarea>
+            <textarea class="form-control form-control-user @error('deskripsi') is-invalid @enderror" value="" id="deskripsi" name="desc" rows="3" placeholder="Deskripsi Kursus">{{$kursus->course_description}}</textarea>
             @error('deskripsi')
                 <p class="text-danger">{{ $message }}</p>
             @enderror
